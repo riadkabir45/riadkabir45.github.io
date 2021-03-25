@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS Scrapper - AnimeWallpaper</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<style>
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+</style>
+</head>
+<body>
+    <img id="pic" src="">
+
+    <script>
+    $.getJSON('https://www.reddit.com/r/Animewallpaper.json?limit=100', function(data) {
+        var random = Math.floor(Math.random()*data.data.dist)
+        document.getElementById("pic").src = data.data.children[random].data.url;
+    });
+    console.log(window.location.href);
+    </script>
+    
+</body>
+</html>
