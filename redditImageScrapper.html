@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>JS redditImageScrapper</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+      body {
+        background-image: url("bgm.jpg");
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 97vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="pic" src="">
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      var page = urlParams.get('page');
+      var pager = urlParams.get('pager');
+      if(page == null)
+        page = 'wallpaper';
+      if(page == null)
+        page = '100';
+      $.getJSON('https://www.reddit.com/r/'+page+'.json?limit='+pager, function(data) {
+        var random = Math.floor(Math.random()*data.data.dist)
+        document.getElementById("pic").src = data.data.children[random].data.url;
+      });
+    </script>
+  </body>
+</html>
