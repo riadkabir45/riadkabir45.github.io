@@ -31,8 +31,15 @@
       if(page == null)
         page = '100';
       $.getJSON('https://www.reddit.com/r/'+page+'.json?limit='+pager, function(data) {
-        var random = Math.floor(Math.random()*data.data.dist)
-        document.getElementById("pic").src = data.data.children[random].data.url;
+        while(true){
+            var random = Math.floor(Math.random()*data.data.dist)
+            var urlToImage = data.data.children[random].data.url;
+            var subs = urlToImage.split(".");
+            var extention = subs[subs.length-1];
+            if(extention == 'jpg' || extention == 'jpeg' || extention == 'png')
+                break;
+        }
+        document.getElementById("pic").src = urlToImage;
       });
     </script>
   </body>
