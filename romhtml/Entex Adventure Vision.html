@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/entex-adventure-vision/bios-entex-adventure-vision-usa-europe-222469">[BIOS] Entex Adventure Vision (USA, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/entex-adventure-vision/defender-usa-europe-222465">Defender (USA, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/entex-adventure-vision/space-force-usa-europe-222466">Space Force (USA, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/entex-adventure-vision/super-cobra-usa-europe-222467">Super Cobra (USA, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/entex-adventure-vision/turtles-usa-europe-222468">Turtles (USA, Europe)</a></td>
+			</tr>
+</table>
+	</body>
+</html>

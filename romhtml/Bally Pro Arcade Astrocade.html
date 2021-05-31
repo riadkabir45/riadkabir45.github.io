@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/astro-battle-1981-astrovision-b-208245">Astro Battle (1981)(Astrovision)[b]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/280-zzzap-dodgem-19xx-bally-208242">280 Zzzap + Dodgem (19xx)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/amazing-maze-tic-tac-toe-19xx-bally-208243">Amazing Maze + Tic-Tac-Toe (19xx)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/artillery-duel-1982-bally-208244">Artillery Duel (1982)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/astrocade-bios-1977-bally-208246">Astrocade BIOS (1977)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/bally-pinball-1981-bally-b-208247">Bally Pinball (1981)(Bally)[b]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/bally-professional-arcade-bios-1978-bally-208248">Bally Professional Arcade BIOS (1978)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/bingo-math-speed-math-19xx-bally-208249">Bingo Math + Speed Math (19xx)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/blackjack-poker-acey-duecy-19xx-bally-208250">Blackjack + Poker + Acey-Duecy (19xx)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/blast-droids-19xx-esoterica-208251">Blast Droids (19xx)(Esoterica)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/clowns-brickyard-19xx-bally-208252">Clowns + Brickyard (19xx)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/cosmic-raider-19xx-astrovision-208253">Cosmic Raider (19xx)(Astrovision)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/dogpatch-19xx-bally-208254">Dogpatch (19xx)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/football-19xx-bally-208255">Football (19xx)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/galaxian-1981-astrovision-p-208256">Galaxian (1981)(Astrovision)[p]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/grand-prix-demolition-derby-19xx-bally-208257">Grand Prix + Demolition Derby (19xx)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/incredible-wizard-the-1981-astrovision-208258">Incredible Wizard, The (1981)(Astrovision)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/letter-match-spell-n-score-crosswords-19xx-bally-208259">Letter Match + Spell &#039;n Score + Crosswords (19xx)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/muncher-19xx-esoterica-208260">Muncher (19xx)(Esoterica)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/panzer-attack-red-baron-19xx-bally-208261">Panzer Attack + Red Baron (19xx)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/seawolf-missile-19xx-bally-b-208262">Seawolf + Missile (19xx)(Bally)[b]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/space-fortress-19xx-bally-208263">Space Fortress (19xx)(Bally)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/star-battle-19xx-astrovision-b-208264">Star Battle (19xx)(Astrovision)[b]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/bally-pro-arcade-astrocade/tornado-baseball-tennis-hockey-handball-19xx-bally-208265">Tornado Baseball + Tennis + Hockey + Handball (19xx)(Bally)</a></td>
+			</tr>
+</table>
+	</body>
+</html>

@@ -1,0 +1,343 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Console</th>
+			<tr>
+				<td><a href="romhtml/Acorn 8 bit.html">Acorn 8 bit</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Acorn Archimedes.html">Acorn Archimedes</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Acorn Electron.html">Acorn Electron</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Amiga 500.html">Amiga 500</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Amstrad CPC.html">Amstrad CPC</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Amstrad GX4000.html">Amstrad GX4000</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Apple I.html">Apple I</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Apple II.html">Apple II</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Apple II GS.html">Apple II GS</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Atari 2600.html">Atari 2600</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Atari 5200.html">Atari 5200</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Atari 7800.html">Atari 7800</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Atari 800.html">Atari 800</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Atari Jaguar.html">Atari Jaguar</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Atari Lynx.html">Atari Lynx</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Atari ST.html">Atari ST</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/BBC Micro.html">BBC Micro</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Bally Pro Arcade Astrocade.html">Bally Pro Arcade Astrocade</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Camputers Lynx.html">Camputers Lynx</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Capcom Play System 1.html">Capcom Play System 1</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Capcom Play System 2.html">Capcom Play System 2</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Casio Loopy.html">Casio Loopy</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Casio PV1000.html">Casio PV1000</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/ColecoVision.html">ColecoVision</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/ColecoVision ADAM.html">ColecoVision ADAM</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Commodore 64.html">Commodore 64</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Commodore Max Machine.html">Commodore Max Machine</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Commodore Pet.html">Commodore Pet</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Commodore Plus4 C16.html">Commodore Plus4 C16</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Commodore VIC20.html">Commodore VIC20</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Dragon Data Dragon.html">Dragon Data Dragon</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Elektronika BK.html">Elektronika BK</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Emerson Arcadia 2001.html">Emerson Arcadia 2001</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Entex Adventure Vision.html">Entex Adventure Vision</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Epoch Super Cassette Vision.html">Epoch Super Cassette Vision</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Fairchild Channel F.html">Fairchild Channel F</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Funtech Super Acan.html">Funtech Super Acan</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/GCE Vectrex.html">GCE Vectrex</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Galaksija.html">Galaksija</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Game Gear.html">Game Gear</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/GameCube.html">GameCube</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/GamePark GP32.html">GamePark GP32</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Gameboy.html">Gameboy</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Gameboy Advance.html">Gameboy Advance</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Gameboy Color.html">Gameboy Color</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Hartung Game Master.html">Hartung Game Master</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Intellivision.html">Intellivision</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Interact Family Computer.html">Interact Family Computer</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Kaypro II.html">Kaypro II</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Luxor ABC 800.html">Luxor ABC 800</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/MAME 037b11.html">MAME 037b11</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/MSX 2.html">MSX 2</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/MSX Computer.html">MSX Computer</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Magnavox Odyssey 2.html">Magnavox Odyssey 2</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Mattel Aquarius.html">Mattel Aquarius</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Memotech MTX512.html">Memotech MTX512</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Microsoft Xbox.html">Microsoft Xbox</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Miles Gordon Sam Coupe.html">Miles Gordon Sam Coupe</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Neo Geo.html">Neo Geo</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Neo Geo Pocket.html">Neo Geo Pocket</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Neo Geo Pocket Color.html">Neo Geo Pocket Color</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Nintendo.html">Nintendo</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Nintendo 3DS.html">Nintendo 3DS</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Nintendo 64.html">Nintendo 64</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Nintendo DS.html">Nintendo DS</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Nintendo Famicom Disk System.html">Nintendo Famicom Disk System</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Nintendo Pokemon Mini.html">Nintendo Pokemon Mini</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Nintendo Virtual Boy.html">Nintendo Virtual Boy</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Nintendo Wii.html">Nintendo Wii</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Nokia N Gage.html">Nokia N Gage</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Pel Varazdin Orao.html">Pel Varazdin Orao</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Philips Videopac.html">Philips Videopac</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Playstation.html">Playstation</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Playstation 2.html">Playstation 2</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Playstation Portable.html">Playstation Portable</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/RCA Studio II.html">RCA Studio II</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Robotron Z1013.html">Robotron Z1013</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sega 32x.html">Sega 32x</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sega Dreamcast.html">Sega Dreamcast</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sega Genesis.html">Sega Genesis</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sega Master System.html">Sega Master System</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sega Pico.html">Sega Pico</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sega SG1000.html">Sega SG1000</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sega Super Control Station.html">Sega Super Control Station</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sega Visual Memory System.html">Sega Visual Memory System</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sharp MZ 700.html">Sharp MZ 700</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sharp X68000.html">Sharp X68000</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sinclair ZX81.html">Sinclair ZX81</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Sufami Turbo.html">Sufami Turbo</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Super Grafx.html">Super Grafx</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Super Nintendo.html">Super Nintendo</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Tandy Color Computer.html">Tandy Color Computer</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Tangerine Oric.html">Tangerine Oric</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Thomson MO5.html">Thomson MO5</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Tiger Game Com.html">Tiger Game Com</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/TurboGrafx 16.html">TurboGrafx 16</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/VTech CreatiVision.html">VTech CreatiVision</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/VTech V Smile.html">VTech V Smile</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Wang VS.html">Wang VS</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Watara Supervision.html">Watara Supervision</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/WonderSwan.html">WonderSwan</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/Z Machine Infocom.html">Z Machine Infocom</a></td>
+			</tr>
+			<tr>
+				<td><a href="romhtml/ZX Spectrum.html">ZX Spectrum</a></td>
+			</tr>
+</table>
+	</body>
+</html>

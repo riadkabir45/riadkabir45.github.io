@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-loopy/anime-land-214886">Anime Land</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-loopy/bios-internal-thermal-printer-214892">[BIOS] Internal Thermal Printer</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-loopy/dream-change-kogane-chan-no-fashion-party-214887">Dream Change - Kogane-chan No Fashion Party</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-loopy/harihari-seal-paradise-214888">HARIHARI Seal Paradise</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-loopy/nigaoe-artist-214889">Nigaoe Artist</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-loopy/pasocom-collection-214890">Pasocom Collection</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-loopy/wanwan-aijou-monogatari-214891">Wanwan Aijou Monogatari</a></td>
+			</tr>
+</table>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/astro-wars-ii-battle-in-galaxy-222471">Astro Wars II - Battle In Galaxy</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/bios-entex-adventure-vision-usa-europe-222470">[BIOS] Entex Adventure Vision (USA, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/boulder-dash-222472">Boulder Dash</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/comic-circus-222473">Comic Circus</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/doraemon-222474">Doraemon</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/elevator-fight-222475">Elevator Fight</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/kung-fu-road-222476">Kung Fu Road</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/lupin-iii-222477">Lupin III</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/milky-princess-222478">Milky Princess</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/miner-2049er-222479">Miner 2049er</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/nebula-222481">Nebula</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/nebula-alt-222480">Nebula (Alt)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/pole-position-ii-222482">Pole Position II</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/pop-chips-222483">Pop &amp; Chips</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/professional-wrestling-222484">Professional Wrestling</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/punch-boy-222485">Punch Boy</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/real-graphic-mahjongg-222486">Real Graphic Mahjongg</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/sansupyuta-222487">Sansupyuta</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/shogi-nyuumon-222488">Shogi Nyuumon</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/super-baseball-222489">Super Baseball</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/super-golf-222490">Super Golf</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/super-soccer-222492">Super Soccer</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/super-soccer-europe-222491">Super Soccer (Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/ton-ton-ball-222493">Ton Ton Ball</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/epoch-super-cassette-vision/wheelie-racer-222494">Wheelie Racer</a></td>
+			</tr>
+</table>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/super-grafx/1941-counter-attack-251679">1941 - Counter Attack</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/super-grafx/aldynes-the-misson-code-for-rage-crisis-251680">Aldynes - The Misson Code For Rage Crisis</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/super-grafx/daimakai-mura-251682">Daimakai Mura</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/super-grafx/madou-king-granzort-251683">Madou King Granzort</a></td>
+			</tr>
+</table>
+	</body>
+</html>

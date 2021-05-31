@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/bios-hartung-game-master-germany-228625">[BIOS] Hartung Game Master (Germany)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/bubble-boy-germany-228614">Bubble Boy (Germany)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/continental-galaxy-2020-germany-228615">Continental Galaxy 2020 (Germany)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/dungeon-adventure-germany-228616">Dungeon Adventure (Germany)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/falling-block-germany-228617">Falling Block! (Germany)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/go-bang-germany-228618">Go Bang (Germany)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/hyper-space-germany-228619">Hyper Space (Germany)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/kung-fu-challenge-germany-228620">Kung Fu Challenge (Germany)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/pin-ball-germany-228621">Pin Ball (Germany)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/space-castle-germany-228622">Space Castle (Germany)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/tennis-master-germany-228623">Tennis Master (Germany)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/hartung-game-master/urban-champion-germany-228624">Urban Champion (Germany)</a></td>
+			</tr>
+</table>
+	</body>
+</html>

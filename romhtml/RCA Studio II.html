@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/rca-studio-ii/bios-rca-studio-ii-244812">[BIOS] RCA Studio II</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/rca-studio-ii/tv-arcade-i-space-war-244807">TV Arcade I - Space War</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/rca-studio-ii/tv-arcade-iii-tennis-squash-244808">TV Arcade III - Tennis + Squash</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/rca-studio-ii/tv-arcade-iv-baseball-244809">TV Arcade IV - Baseball</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/rca-studio-ii/tv-arcade-v-speedway-tag-244810">TV Arcade V - Speedway + Tag</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/rca-studio-ii/tv-casino-i-blackjack-244811">TV Casino I - Blackjack</a></td>
+			</tr>
+</table>
+	</body>
+</html>

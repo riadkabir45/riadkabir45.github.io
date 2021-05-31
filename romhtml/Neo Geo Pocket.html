@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/neo-geo-pocket/baseball-stars-japan-europe-en-ja-232465">Baseball Stars (Japan, Europe) (En,Ja)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/neo-geo-pocket/bios-snk-neo-geo-pocket-japan-europe-232475">[BIOS] SNK Neo Geo Pocket (Japan, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/neo-geo-pocket/king-of-fighters-r-1-melon-chan-no-seichou-nikki-pocket-fighting-series-demo-232466">King Of Fighters R-1 &amp; Melon-chan No Seichou Nikki - Pocket Fighting Series (Demo)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/neo-geo-pocket/king-of-fighters-r-1-pocket-fighting-series-japan-europe-en-ja-232467">King Of Fighters R-1 - Pocket Fighting Series (Japan, Europe) (En,Ja)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/neo-geo-pocket/melon-chan-no-seichou-nikki-232468">Melon-chan No Seichou Nikki</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/neo-geo-pocket/neo-cherry-master-real-casino-series-japan-europe-en-ja-232469">Neo Cherry Master - Real Casino Series (Japan, Europe) (En,Ja)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/neo-geo-pocket/neo-geo-cup-98-japan-europe-en-ja-232470">Neo Geo Cup &#039;98 (Japan, Europe) (En,Ja)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/neo-geo-pocket/pocket-tennis-pocket-sports-series-japan-europe-en-ja-232471">Pocket Tennis - Pocket Sports Series (Japan, Europe) (En,Ja)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/neo-geo-pocket/renketsu-puzzle-tsunagete-pon-232472">Renketsu Puzzle Tsunagete Pon!</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/neo-geo-pocket/samurai-shodown-pocket-fighting-series-japan-europe-en-ja-232473">Samurai Shodown! - Pocket Fighting Series (Japan, Europe) (En,Ja)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/neo-geo-pocket/shougi-no-tatsujin-232474">Shougi No Tatsujin</a></td>
+			</tr>
+</table>
+	</body>
+</html>

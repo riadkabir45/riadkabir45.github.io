@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-pv1000/amidar-214893">Amidar</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-pv1000/excite-mahjong-214894">Excite Mahjong</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-pv1000/pachinko-ufo-214895">Pachinko-UFO</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-pv1000/pooyan-214896">Pooyan</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/casio-pv1000/super-cobra-214897">Super Cobra</a></td>
+			</tr>
+</table>
+	</body>
+</html>

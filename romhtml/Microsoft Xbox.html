@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/dead-or-alive-2-ultimate-275662">Dead Or Alive 2 Ultimate</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/dino-crisis-3-275659">Dino Crisis 3</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/dragonball-z-sagas-275663">Dragonball Z Sagas</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/fable-the-lost-chapters-275671">Fable - The Lost Chapters</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/forza-motorsport-275660">Forza Motorsport</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/gta-san-andreas-275655">GTA San Andreas</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/gta-vice-city-275656">GTA Vice City</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/halo-2-275661">Halo 2</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/halo-2-277256">Halo 2</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/halo-combat-evolved-275657">Halo - Combat Evolved</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/jet-set-radio-future-275669">Jet Set Radio Future</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/marvel-vs-capcom-2-275670">Marvel Vs Capcom 2</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/metal-gear-solid-2-substance-275665">Metal Gear Solid 2 Substance</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/metal-slug-3-275664">Metal Slug 3</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/midnight-club-3-dub-edition-remix-275658">Midnight Club 3 DUB Edition Remix</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/mortal-kombat-armageddon-272896">Mortal Kombat Armageddon</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/mortal-kombat-shaolin-monks-275668">Mortal Kombat Shaolin Monks</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/need-for-speed-underground-2-224911">Need For Speed Underground 2</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/shenmue-ii-275667">Shenmue II</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/microsoft-xbox/wwe-raw-2-275666">WWE Raw 2</a></td>
+			</tr>
+</table>
+	</body>
+</html>

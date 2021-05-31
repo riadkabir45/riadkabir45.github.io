@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/air-sea-attack-asia-europe-257840">Air Sea Attack (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/astro-pinball-asia-europe-257841">Astro Pinball (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/auto-chase-asia-europe-257842">Auto Chase (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/bios-vtech-creativision-asia-europe-257860">[BIOS] VTech CreatiVision (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/chopper-rescue-asia-europe-257844">Chopper Rescue (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/chopper-rescue-asia-europe-alt-257843">Chopper Rescue (Asia, Europe) (Alt)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/crazy-chicky-asia-europe-257845">Crazy Chicky (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/creativision-basic-asia-europe-257846">CreatiVision Basic (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/deep-sea-adventure-asia-europe-257847">Deep Sea Adventure (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/hapmon-asia-europe-257848">Hapmon (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/locomotive-asia-europe-257849">Locomotive (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/mouse-puzzle-asia-europe-257850">Mouse Puzzle (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/music-maker-asia-europe-257851">Music Maker (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/planet-defender-asia-europe-257853">Planet Defender (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/planet-defender-asia-europe-alt-257852">Planet Defender (Asia, Europe) (Alt)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/police-jump-asia-europe-257854">Police Jump (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/soccer-asia-europe-257855">Soccer (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/sonic-invader-asia-europe-257856">Sonic Invader (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/tank-attack-asia-europe-257857">Tank Attack (Asia, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/tennis-asia-europe-dse-257858">Tennis (Asia, Europe) (DSE)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/vtech-creativision/tennis-asia-europe-vtl-257859">Tennis (Asia, Europe) (VTL)</a></td>
+			</tr>
+</table>
+	</body>
+</html>

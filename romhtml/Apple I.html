@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/apple-i/apple-1-basic-19xx-apple-load-at-e000-efff-enter-at-e000-196417">Apple 1 BASIC (19xx)(Apple)[load At E000.EFFF, Enter At E000]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/apple-i/blackjack-19xx-req-basic-load-at-4a-ffr800-fffr-enter-at-e2b3-196418">Blackjack (19xx)(-)[Req BASIC][load At 4A.FFR800.FFFR, Enter At E2B3]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/apple-i/lunar-lander-1976-load-at-300-a00r-enter-at-300-196419">Lunar Lander (1976)(-)[load At 300.A00R, Enter At 300]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/apple-i/star-trek-1976-p-req-basic-load-at-4a-ffr300-fffr-enter-at-e2b3-196420">Star Trek (1976)(-)[p][Req BASIC][load At 4A.FFR300.FFFR, Enter At E2B3]</a></td>
+			</tr>
+</table>
+	</body>
+</html>

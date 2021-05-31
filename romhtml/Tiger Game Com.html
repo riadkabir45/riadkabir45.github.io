@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/batman-robin-256281">Batman &amp; Robin</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/bios-tiger-game-com-external-256303">[BIOS] Tiger Game.com (External)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/bios-tiger-game-com-internal-256304">[BIOS] Tiger Game.com (Internal)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/centipede-256282">Centipede</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/duke-nukem-3d-256283">Duke Nukem 3D</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/fighters-megamix-256284">Fighters Megamix</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/frogger-256285">Frogger</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/henry-256286">Henry</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/indy-500-256287">Indy 500</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/internet-256288">Internet</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/jeopardy-256289">Jeopardy!</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/jurassic-park-the-lost-world-256290">Jurassic Park - The Lost World</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/lights-out-256291">Lights Out</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/monopoly-256292">Monopoly</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/mortal-kombat-trilogy-256293">Mortal Kombat Trilogy</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/quiz-wiz-cyber-trivia-256294">Quiz Wiz - Cyber Trivia</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/resident-evil-2-256295">Resident Evil 2</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/scrabble-256296">Scrabble</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/sonic-jam-256297">Sonic Jam</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/tiger-casino-256298">Tiger Casino</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/tiger-web-link-256299">Tiger Web Link</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/wheel-of-fortune-2-256301">Wheel Of Fortune 2</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/wheel-of-fortune-256300">Wheel Of Fortune</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/tiger-game-com/williams-arcade-classics-256302">Williams Arcade Classics</a></td>
+			</tr>
+</table>
+	</body>
+</html>

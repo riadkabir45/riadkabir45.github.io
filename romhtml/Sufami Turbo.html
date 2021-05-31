@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/bisyoujyo-senshi-sailor-moon-s-fuwa-fuwa-panic-2-st-251664">Bisyoujyo_Senshi_Sailor_Moon_S_-_Fuwa_Fuwa_Panic_2__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/crayon-shin-chan-nagagutsu-dobon-st-251665">Crayon_Shin_Chan_-_Nagagutsu_Dobon__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/gegege-no-kitarou-youkai-donjara-st-251666">Gegege_no_Kitarou_-_Youkai_Donjara__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/gekisou-sentai-car-rangers-st-251667">Gekisou_Sentai_Car_Rangers__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/poi-poi-ninjya-world-st-251668">Poi_Poi_Ninjya_World__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/sd-gundam-generations-a-1-nen-sensouki-st-251669">SD_Gundam_Generations_(A)_1_Nen_Sensouki__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/sd-gundam-generations-b-guripus-senki-st-251670">SD_Gundam_Generations_(B)_Guripus_Senki__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/sd-gundam-generations-c-axiz-senki-st-251671">SD_Gundam_Generations_(C)_Axiz_Senki__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/sd-gundam-generations-d-babironia-kenkoku-senki-st-251672">SD_Gundam_Generations_(D)_Babironia_Kenkoku_Senki__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/sd-gundam-generations-e-zansukaru-senki-st-251673">SD_Gundam_Generations_(E)_Zansukaru_Senki__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/sd-gundam-generations-f-colony-kakutouki-st-251674">SD_Gundam_Generations_(F)_Colony_Kakutouki__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/sd-ultra-battle-seven-densetsu-st-251676">SD_Ultra_Battle_-_Seven_Densetsu__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/sd-ultra-battle-seven-ultraman-st-251675">SD_Ultra_Battle_-_Seven_&amp;_Ultraman__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/sd-ultra-battle-ultraman-densetsu-st-251678">SD_Ultra_Battle_-_Ultraman_Densetsu__(ST)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sufami-turbo/sd-ultra-battle-ultraman-seven-st-251677">SD_Ultra_Battle_-_Ultraman_&amp;_Seven__(ST)</a></td>
+			</tr>
+</table>
+	</body>
+</html>

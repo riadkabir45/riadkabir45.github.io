@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/atomic-mission-usa-europe-221509">Atomic Mission (USA, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/bios-commodore-1551-usa-europe-221519">[BIOS] Commodore 1551 (USA, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/bios-commodore-232-proto-221520">[BIOS] Commodore 232 (Proto)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/bios-commodore-plus-4-europe-r3-221521">[BIOS] Commodore Plus-4 (Europe) (R3)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/bios-commodore-plus-4-europe-r4-221522">[BIOS] Commodore Plus-4 (Europe) (R4)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/bios-commodore-plus-4-europe-r5-221523">[BIOS] Commodore Plus-4 (Europe) (R5)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/bios-commodore-plus-4-r4-221524">[BIOS] Commodore Plus-4 (R4)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/bios-commodore-plus-4-r5-221525">[BIOS] Commodore Plus-4 (R5)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/bios-commodore-v364-proto-221526">[BIOS] Commodore V364 (Proto)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/calc-plus-program-221510">Calc Plus (Program)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/commodore-16-keyboard-tutorial-cartridge-program-221511">Commodore 16 Keyboard Tutorial Cartridge (Program)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/financial-advisor-program-221512">Financial Advisor (Program)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/jack-attack-usa-europe-221513">Jack Attack (USA, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/logo-program-221514">LOGO (Program)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/octasoft-basic-v7-0-hungary-program-221515">Octasoft BASIC V7.0 (Hungary) (Program)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/pirate-adventure-usa-europe-221516">Pirate Adventure (USA, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/strange-odyssey-usa-europe-221517">Strange Odyssey (USA, Europe)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/commodore-plus4-c16/viduzzles-usa-europe-221518">Viduzzles (USA, Europe)</a></td>
+			</tr>
+</table>
+	</body>
+</html>

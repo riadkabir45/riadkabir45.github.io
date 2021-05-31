@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sega-super-control-station/crocky-19xx-le-douarain-marc-p-247041">Crocky (19xx)(Le Douarain, Marc)[p]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sega-super-control-station/board-games-collection-19xx-le-douarain-marc-fr-247039">Board Games Collection (19xx)(Le Douarain, Marc)(fr)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sega-super-control-station/complete-arcade-pack-collection-the-19xx-p-247040">Complete Arcade Pack Collection, The (19xx)(-)[p]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sega-super-control-station/froggy-cube-it-198x-scorpion-247042">Froggy + Cube It (198x)(Scorpion)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sega-super-control-station/grandstand-tape-compilation-games-19xx-p-247043">Grandstand Tape Compilation - Games (19xx)(-)[p]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sega-super-control-station/jeux-collection-1-19xx-le-douarain-marc-fr-247044">Jeux Collection 1 (19xx)(Le Douarain, Marc)(fr)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sega-super-control-station/jeux-collection-2-19xx-le-douarain-marc-fr-247045">Jeux Collection 2 (19xx)(Le Douarain, Marc)(fr)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sega-super-control-station/jeux-educatifs-collection-19xx-le-douarain-marc-fr-247046">Jeux Educatifs Collection (19xx)(Le Douarain, Marc)(fr)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sega-super-control-station/kamikaze-19xx-le-douarain-marc-fr-p-247047">Kamikaze (19xx)(Le Douarain, Marc)(fr)[p]</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sega-super-control-station/olympiades-19xx-le-douarain-marc-fr-pd-247048">Olympiades (19xx)(Le Douarain, Marc)(fr)(PD)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/sega-super-control-station/poseidon-wars-space-panic-rambo-1991-le-douarain-marc-fr-pd-247049">Poseidon Wars + Space Panic + Rambo (1991)(Le Douarain, Marc)(fr)(PD)</a></td>
+			</tr>
+</table>
+	</body>
+</html>

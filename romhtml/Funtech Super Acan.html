@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>RomsMania</title>
+		<script>
+			function myFunction() {
+			// Declare variables
+		    var input, filter, table, tr, td, i, txtValue;
+		    input = document.getElementById("myInput");
+  		    filter = input.value.toUpperCase();
+  		    table = document.getElementById("romTable");
+  		    tr = table.getElementsByTagName("tr");
+
+  		    // Loop through all table rows, and hide those who don't match the search query
+  		    for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[0];
+					if (td) {
+						txtValue = td.textContent || td.innerText;
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+		    }
+        </script>
+	</head>
+	<body align="center">
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+		<table align="center" id="romTable">
+			<th>Name</th>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/funtech-super-acan/boom-zoo-taiwan-222532">Boom Zoo (Taiwan)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/funtech-super-acan/journey-to-the-laugh-taiwan-222533">Journey To The Laugh (Taiwan)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/funtech-super-acan/monopoly-adventure-in-africa-taiwan-222534">Monopoly - Adventure In Africa (Taiwan)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/funtech-super-acan/sango-fighter-taiwan-222535">Sango Fighter (Taiwan)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/funtech-super-acan/speedy-dragon-taiwan-222536">Speedy Dragon (Taiwan)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/funtech-super-acan/super-dragon-force-taiwan-222537">Super Dragon Force (Taiwan)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/funtech-super-acan/super-taiwanese-baseball-league-taiwan-222538">Super Taiwanese Baseball League (Taiwan)</a></td>
+			</tr>
+			<tr>
+				<td><a href="https://romsmania.cc/roms/funtech-super-acan/the-son-of-evil-taiwan-222539">The Son Of Evil (Taiwan)</a></td>
+			</tr>
+</table>
+	</body>
+</html>
