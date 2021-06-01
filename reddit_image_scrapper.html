@@ -3,34 +3,23 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    <title>JS redditImageScrapper</title>
+    <title>JS Reddit Image Scrapper</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <style>
-      body {
-        background-image: url("bgm.jpg");
-      }
-      img {
-        display: block;
-        max-width: 100%;
-        max-height: 97vh;
-        margin-left: auto;
-        margin-right: auto;
-        margin: auto;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+	<input type="text" id="myInput" placeholder="Search for names..">
     <img id="pic" src="">
     <script>
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      var page = urlParams.get('page');
-      var pager = urlParams.get('pager');
+      var input = document.getElementById("myInput");
+	  var page = input.value.toUpperCase();
+      var pager = '500';
       if(page == null)
         page = 'wallpaper';
       if(page == null)
         page = '100';
       $.getJSON('https://www.reddit.com/r/'+page+'.json?limit='+pager, function(data) {
+		console.log(data.data.dist);
         while(true){
             var random = Math.floor(Math.random()*data.data.dist)
             var urlToImage = data.data.children[random].data.url;
