@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-	<input type="text" id="myInput" placeholder="Search for names..">
+    <div id="bInput" >
+      <input type="text" id="myInput" placeholder="Search for names..">
+      <button id="rbt" onclick="show()">Find </button>
+    </div>
     <img id="pic" src="">
     <script>
+      function show() {
+      document.getElementById("rbt").innerHTML = "Finding...";
       var input = document.getElementById("myInput");
 	  var page = input.value.toUpperCase();
       var pager = '500';
@@ -29,7 +34,9 @@
                 break;
         }
         document.getElementById("pic").src = urlToImage;
+        document.getElementById("rbt").innerHTML = "Find";
       });
+      }
     </script>
   </body>
 </html>
