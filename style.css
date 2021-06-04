@@ -21,6 +21,7 @@ th {
 
 input {
   width: 100%;
+  height: 3vw;
 }
 
 img {
@@ -32,4 +33,17 @@ img {
         margin-left: auto;
         margin-right: auto;
         margin: auto;
+}
+
+#bInput {
+  width: 100%;
+}
+
+#bInput input {
+  width: 78%;
+}
+
+#bInput button {
+  width: 20%;
+  height: 3vw;
 }
