@@ -1,0 +1,252 @@
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+	animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+.abtBG{
+	background-color:#F1F1F1;
+	padding:4vw;
+	border-radius:5vh;
+	transition: background-color 1s;
+}
+
+.abtBG:hover{
+	background-color:#FFFFFF;
+	padding:4vw;
+	border-radius:5vh;
+	transition: background-color 1s;
+}
+
+.card{
+	width:15vw;
+	border:black;
+	text-align:center;
+}
+
+.Main {
+	color: #000;
+	display:flex;
+	flex-direction: row;
+	justify-content:center;
+	align-items:center;
+	padding:1vw;
+	padding-right:2vw;
+	font-family: Roboto;
+	font-weight: bold;
+	font-size:3vw;
+}
+
+.About{
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+}
+
+.Contact{
+	display:flex;
+	flex-direction:column;
+	justify-content: space-around;
+}
+
+.subc{
+	display:flex;
+	justify-content: space-around;
+}
+
+.subc .bi{
+	font-size:6vw;
+}
+
+button.bi{
+	background-color:white;
+	color:black;
+	font-size:5vw;
+}
+
+.abtL{
+	justify-content:center;
+	text-align:center;
+	font-size:6vw;
+}
+
+.abtR{
+	justify-content:center;
+	font-family: Roboto;
+	font-weight: bold;
+	font-size:2vw;
+	color:grey;
+	padding-right:2vw;
+}
+
+.page{
+	padding-top:4vw;
+	height:100vh;
+	width:96vw;
+}
+
+
+.navT{
+	font-family: Ubuntu;
+	font-weight: bold;
+	font-size:1vw;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+.em1{
+	display:none;
+}
+
+
+.res:hover .em0{
+	display:none;
+}
+
+.res:hover .em1{
+	display:inline;
+}
+
+.Nav{
+	background-image:linear-gradient(#FFFFFF, #F9F9F9);;
+	padding-right:5vw;
+	position: fixed;
+	display: flex;
+	width:100vw;
+	height:8vh;
+	justify-content:space-between;
+	padding:1vw;
+	padding-right:2vw;
+}
+
+div.Nav{
+	color:black;
+}
+
+.NavB{
+	margin-right:0.5vw;
+	background-color:white;
+	color:black;
+}
+
+
+body{
+	background-color:white;
+}
+
+.logoBG{
+	background-color:black;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	padding:0.5vw;
+	height:25vw;
+	width:25vw;
+	border-radius:100%;
+}
+
+.mainLogo{
+	border-radius:100%;
+	width:99%;
+}
+
+.flexify{
+	display:flex;
+	flex-direction:row;
+}
+
+flexifyc{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+}
+
+.flex{
+	flex: 1;
+}
+
+.homeD{
+	flex: 1;
+	display: flex;
+	flex-direction:column;
+	padding:3vw;
+}
+
+.homeL{
+	display: flex;
+	padding-right:15vw;
+	justify-content:center;
+}
+
+.homeText{
+	padding-left:7vw;
+	text-align:right;
+}
+
+.homeText.second{
+	font-size:2vw;
+	color: grey;
+	font-weight: regular;
+}
+
+.homeText.third{
+	font-size:1vw;
+	color: grey;
+	font-weight: regular;
+}
+
+.rev-text{
+	text-align: right;
+}
+
+
+@media screen and (orientation:portrait) {
+	.Main{
+		padding-top:15vh;
+		flex-direction: column-reverse;
+	}
+	
+	.logoBG{
+		align-self:end;
+		height:40vw;
+		width:40vw;
+	}
+	
+	.navT{
+		font-size:2.5vh;
+	}
+	
+	.res{
+		font-size:5vh;
+	}
+
+	.homeText.second{
+		font-size:2vh;
+		color: grey;
+		font-weight: regular;
+	}
+
+	.homeText.third{
+		font-size:1vh;
+		color: grey;
+		font-weight: regular;
+	}
+	
+	.rev-text{
+		display:flex;
+		flex-direction: row;
+		align-items: end;
+	}
+}
