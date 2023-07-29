@@ -13,7 +13,7 @@ function Contact() {
 			<CCard src="/ashik.jpg">Ashik</CCard>
 			<CCard src="/samio.jpg">Samio</CCard>
 			<CCard src="/rifat.jpg">Rifat</CCard>
-			<CCard src="/kaniz.png">Kaniz</CCard>
+			<CCard src="/naimur.png">Naimur</CCard>
 			<CCard src="/navana.png">Navana</CCard>
 		</div>
     </div>
