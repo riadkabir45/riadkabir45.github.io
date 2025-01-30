@@ -270,6 +270,9 @@ timepoint.right .left {
   margin-top: 5px;
   display: block;
 }
+#skills .grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 
 .text-shadow-lg {
   text-shadow: 0 0 10px black; /* Adjust blur and color as needed */
