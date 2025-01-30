@@ -1,16 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/drawing.svg" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RiadKabir45</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>riadkabir45</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <script src="https://kit.fontawesome.com/057ff2dbd4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header>
+      <nav>
+        <img src="images/logo.png" alt="">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#timeline">Time</a></li>
+          <li><a href="#showcase">Skills</a></li>
+        </ul>
+        <button>Get Started</button>
+        <i class="fa-solid fa-bars" onclick="handleHam()"></i>
+      </nav>
+    </header>
+    <section id="home" class="flex flex-col lg:flex-row">
+      <div class="flex flex-1 lg:justify-end lg:items-center justify-center items-end px-10">
+        <img src="images/profile1.jpg" class="pop-in rounded-full max-h-100 border-slate-900 border-5" alt="profile pic">
+      </div>
+      <div class="pop-in flex-1 flex justify-start items-center lg:pl-10 p-20 text-slate-50">
+        <p class="lg:text-5xl md:text-4xl text-xl">
+          Hi <br>
+          I am <span class="text-red-500">Mokaddimul Kabir</span> <br>
+          I am <span class="dtext" value="a Gamer" darray="a Gamer,an Otaku"></span> <br> <br>
+
+          I am currently studying <br>
+          Under Brac University<br><br>
+        </p>
+      </div>
+    </section>
+    <section id="showcase" class="bg-slate-900 px-10 text-white flex flex-col justify-center w-full">
+      <div class="slider flex-1 flex">
+        <div id="slide-1">
+          <img src="https://images.unsplash.com/photo-1603969409447-ba86143a03f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <div id="slide-2">
+          <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=2042&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D1" alt="">
+        </div>
+        <div id="slide-3">
+          <img src="https://images.unsplash.com/photo-1636489948870-058e57b5f7d9?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <div id="slide-4">
+          <img src="https://images.unsplash.com/photo-1636036793492-4317c9d7d9f8?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+      </div>
+      <div class="mt-10 slide-nav sticky bottom-10 pb-10">
+        <div class="buttons flex gap-x-10 justify-center items-center">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+          <a href="#slide-4"></a>
+        </div>
+      </div>
+    </section>
+    <section id="timeline" class="p-20">
+      <div class="flex flex-col justify-center items-center relative  -left-2/3 md:-left-0">
+      <time>
+      <timeball></timeball>
+      <timeline></timeline>
+      </time>
+      <timepoint class="right">
+        <div class="left">
+        </div>
+        <div>
+        <timeline></timeline>
+        <timeball></timeball>
+        <timeline></timeline>
+        </div>
+        <div class="right">
+          <span>Birthday <small>2000</small></span><br>
+          <p>Hi I am riad, I was born today early in the morning, Fk you world</p>
+        </div>
+      </timepoint>
+      <timepoint class="left">
+        <div class="left">
+          <span>Brother <small>2007</small></span><br>
+          <p>Damn, my brother was born this year, just few hundred meter from my home</p>
+        </div>
+        <div>
+        <timeline></timeline>
+        <timeball></timeball>
+        <timeline></timeline>
+        </div>
+        <div class="right">
+        </div>
+      </timepoint>
+      <timepoint class="right">
+        <div class="left">
+        </div>
+        <div>
+        <timeline></timeline>
+        <timeball></timeball>
+        <timeline></timeline>
+        </div>
+        <div class="right">
+          <span>HSC <small>2021</small></span><br>
+          <p>After spending a year or more under covid, i am ready to fail. As I had inensly trained for all bash and linux challanges</p>
+        </div>
+      </timepoint>
+      <timepoint class="left">
+        <div class="left">
+          <span>Current <small>2024</small></span><br>
+          <p>I am at my 4th year of versity life. Everything is hazy, problems everywhere, only thing that is constant is academic pressure</p>
+        </div>
+        <div>
+        <timeline></timeline>
+        <timeball></timeball>
+        <timeline></timeline>
+        </div>
+        <div class="right">
+        </div>
+      </timepoint>
+      <time>
+      <timeline></timeline>
+      <timeball></timeball>
+      </time>
+      </div>
+    </section>
+    <script src="script.js"></script>
   </body>
 </html>
+
+        

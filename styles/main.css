@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("/images/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Roboto", serif;
+  font-weight: bolder;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100vw;
+}
+
+@keyframes popin {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 100;
+  }
+}
+@keyframes hiddenNav {
+  to {
+    transform: translateX(-100%);
+  }
+}
+header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  height: 80px;
+  color: white;
+  margin: 0;
+  background-color: black;
+  padding-left: 1em;
+  padding-right: 1em;
+  box-shadow: 2px 2px 10px black;
+  transition: all;
+  transition-duration: 500ms;
+  z-index: 999;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+header nav img {
+  height: 70%;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 100%;
+}
+header nav i {
+  font-size: 3em;
+}
+@media screen and (min-width: 768px) {
+  header nav i {
+    display: none !important;
+  }
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 250px;
+}
+@media screen and (max-width: 768px) {
+  header nav ul {
+    display: flex;
+    position: fixed;
+    height: 150vh;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    background-color: black;
+    flex-direction: column;
+    z-index: -1;
+    padding-top: 10em;
+    justify-content: start;
+    align-items: center;
+    transition: all;
+    transition-duration: 1s;
+  }
+  header nav ul.active {
+    transform: translateX(0%);
+  }
+  header nav ul li {
+    padding: 2em !important;
+  }
+}
+header nav ul li {
+  padding: 0.5em;
+  cursor: pointer;
+  list-style: none;
+}
+
+.tobepoped {
+  opacity: 0;
+}
+
+#home {
+  padding-top: 100px;
+}
+
+.pop-in {
+  animation-name: popin;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+section {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+button {
+  background-color: white;
+  color: black;
+  padding: 0.8em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.dtext {
+  transition: all;
+}
+
+.test1 {
+  background-color: red;
+}
+
+.test2 {
+  background-color: green;
+}
+
+timeball {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border-width: 2px;
+  border-color: white;
+}
+
+timeline {
+  width: 5px;
+  height: 20px;
+  background-color: white;
+}
+
+time {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: auto;
+  align-items: center;
+  opacity: 0;
+}
+
+timepoint {
+  opacity: 0;
+  display: flex;
+  color: white;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+timepoint .left, timepoint .right {
+  border-color: white;
+  border-width: 1px;
+  width: 280px;
+  border-radius: 1em;
+  padding: 1em;
+  background-color: rgb(39, 38, 38);
+}
+timepoint div {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+timepoint timeline {
+  flex-grow: 1;
+}
+timepoint.left .right {
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  timepoint.left {
+    flex-direction: row-reverse;
+  }
+  timepoint .right, timepoint .left {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+timepoint.right .left {
+  opacity: 0;
+}
+
+#showcase {
+  position: relative;
+}
+#showcase div {
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+#showcase div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+  flex: 1 0 100%;
+}
+#showcase div img {
+  display: inline-block;
+  padding-top: 10px;
+  flex-grow: 1;
+  scroll-snap-align: start;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1em;
+}
+
+.slide-nav a {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 10px 20;
+  border-radius: 100%;
+}/*# sourceMappingURL=main.css.map */
