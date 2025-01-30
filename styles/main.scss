@@ -1,4 +1,9 @@
 @import 'colors';
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+@font-face {
+    font-family: "Roboto Nerd";
+    src: url('/fonts/RobotoMonoNerdFont-Regular.ttf');
+}
 
 * {
     box-sizing: border-box;
@@ -13,11 +18,15 @@ body {
     background-attachment: fixed;
     background-size: cover;
     font-family: "Roboto", serif;
-    font-weight: bolder;
     margin: 0;
     overflow-x: hidden;
     overflow-y:auto;
     width: 100vw;
+}
+
+i {
+    font-family: "Roboto Nerd";
+    font-style: normal;
 }
 
 @mixin margin-x ($value) {
@@ -279,4 +288,48 @@ timepoint {
         @include boxShadow(20);
         border-radius: 100%;
     }
+}
+
+#skills {
+    div {
+        div {
+            padding: 1em;
+            border-radius: 0.7em;
+            box-shadow: 1px 1px 5px silver;
+            color: black;
+            front {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                icon {
+                    font-size: 2em;
+                    display: flex;
+                    gap: 5px;
+                }
+            }
+            background-color: white;
+            description {
+                margin-top: 5px;
+                display: block;
+            }
+        }
+    }
+}
+
+.text-shadow-lg {
+    text-shadow: 0 0 10px black; /* Adjust blur and color as needed */
+}
+
+#about p {.init{
+    display: inline-block;
+    &:hover{
+        display: none;
+        &+ i {
+            display: inline-block;
+        }
+    }
+}}
+
+footer span {
+    display: block;
 }

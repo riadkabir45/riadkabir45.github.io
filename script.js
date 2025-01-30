@@ -92,5 +92,8 @@ document.addEventListener('DOMContentLoaded',() => {
     document.querySelectorAll('timepoint').forEach(element => {
         observer.observe(element);
     });
+    document.querySelectorAll('.card').forEach(element => {
+        observer.observe(element);
+    });
 })
 

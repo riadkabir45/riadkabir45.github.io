@@ -7,19 +7,25 @@
     <title>riadkabir45</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="icon" href="/images/logo.png" type="image/png">
-    <script src="https://kit.fontawesome.com/057ff2dbd4.js" crossorigin="anonymous"></script>
+    <!-- script src="https://kit.fontawesome.com/057ff2dbd4.js" crossorigin="anonymous"></script -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Your Website Title" />
+    <meta property="og:description" content="Portfolio of riadkabir45" />
+    <meta property="og:image" content="/images/preview.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:url" content="https://github.com/riadkabir45/riadkabir45.github.io" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="pr-5">
         <img src="images/logo.png" alt="">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#timeline">Time</a></li>
-          <li><a href="#showcase">Skills</a></li>
+          <li><a href="#showcase">Showcase</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
         </ul>
         <button>Get Started</button>
         <i class="fa-solid fa-bars" onclick="handleHam()"></i>
@@ -65,7 +71,7 @@
       </div>
     </section>
     <section id="timeline" class="p-20">
-      <div class="flex flex-col justify-center items-center relative  -left-2/3 md:-left-0">
+      <div class="flex flex-col justify-center items-center relative  -translate-x-1/2 md:-translate-x-0">
       <time>
       <timeball></timeball>
       <timeline></timeline>
@@ -127,6 +133,114 @@
       <timeball></timeball>
       </time>
       </div>
+    </section>
+    <section id="skills" class="bg-slate-900 flex p-5 justify-center items-center">
+      <div class="container mx-auto rounded-lg p-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-dev-javascript"></i></icon>
+            <name>Java Script</name>
+          </front>
+          <description>I am working on a Mern Stack project for learnathon</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-cod-regex"></i></icon>
+            <name>Regex</name>
+          </front>
+          <description>I have built several web scrappers and automators with regex</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-dev-spring"></i></icon>
+            <name>Spring</name>
+          </front>
+          <description>I had created a secure banking system with Spring in my SE course</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-dev-php"></i></icon>
+            <name>PHP</name>
+          </front>
+          <description>My first dev course was with PHP for buidling section mate finding web site</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-dev-django"></i></icon>
+            <name>Django</name>
+          </front>
+          <description>I have built secure E2E ecrypted chat system called redchat with Django</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-dev-qt"></i></icon>
+            <name>QT</name>
+          </front>
+          <description>I hade made a course routine maker which had frontend with QT</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-seti-rust"></i></icon>
+            <name>Rust</name>
+          </front>
+          <description>Long time ago, I had contributed on a cmd musing player coded in rust</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-custom-cpp"></i></icon>
+            <name>C/C++</name>
+          </front>
+          <description>My first real programming language was C/CPP around class 9</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-md-arch"></i></icon>
+            <name>Linux</name>
+          </front>
+          <description>I have daily drived Arch, Fedora, Debian and currently using Debian</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-fa-react"></i></icon>
+            <name>React</name>
+          </front>
+          <description>Including my previus portfolio, some web apps hosted on my github pages are built with react from Vite</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-dev-bash"></i></icon>
+            <name>Shell Script</name>
+          </front>
+          <description>I have extended my linux skills by using TWM and customized their looks via bash scripting</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-dev-postgresql"></i></icon>
+            <name>Postgres</name>
+          </front>
+          <description>All my prevous prijects were built with MySQL and my current Mern project is built with Postgresql</description>
+        </div>
+        <div class="card">
+          <front>
+            <icon><i class="nf nf-dev-godot"></i></icon>
+            <name>Godot</name>
+          </front>
+          <description>I had created basic 2D Galaga and 3D Chappy with Godot</description>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="text-white text-shadow-lg flex flex-col justify-between items-center text-center">
+      <p class="my-auto text-2xl md:text-5xl">
+        About me? <br> <br>
+        I am nobody <br>
+        Just trying to cling to life <br> <br>
+        With hopes to make family happy <br> <br> <br>
+        Wish me luck <i class="nf nf-fa-face_smile_beam init"></i><i class="nf nf-md-emoticon_dead_outline hidden"></i>
+      </p>
+      <footer class="w-full bg-slate-900 h-20 text-center flex flex-col justify-around">
+        <span>Built with Tailwind and Sass</span>
+        <span>&copy; 2025 Mokaddimul Kabir. All rights reserved. | Email: riadkabir45@gmail.com</span>
+      </footer>
     </section>
     <script src="script.js"></script>
   </body>
