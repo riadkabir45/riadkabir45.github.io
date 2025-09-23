@@ -6,7 +6,7 @@ export default function Home() {
   const mdFiles = scanMarkdowns('posts');
 
   return (
-    <>
+    <div className="container mx-auto px-4 py-8">
       <p>Hello, Next.js!</p>
       <div>
         {mdFiles.getAllPosts().map(post => (
@@ -16,6 +16,6 @@ export default function Home() {
           </Link>
         ))}
       </div>
-    </>
+    </div>
   );
 }
