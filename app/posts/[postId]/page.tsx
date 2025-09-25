@@ -2,6 +2,7 @@ import { scanMarkdowns } from '@/utils/mdFiles';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 
 export default async function PostPage({ params }: { params: { postId: string } }) {
   const { postId } = await params;
@@ -67,18 +68,18 @@ export default async function PostPage({ params }: { params: { postId: string } 
       {/* Navigation */}
       <footer className="mt-12 pt-8 border-t border-gray-200">
         <div className="flex justify-between">
-          <a 
+          <Link
             href="/" 
             className="text-blue-600 hover:text-blue-800 font-medium"
           >
             ← Back to Home
-          </a>
-          <a 
-            href="/posts" 
+          </Link>
+          <Link
+            href="/posts"
             className="text-blue-600 hover:text-blue-800 font-medium"
           >
             All Posts →
-          </a>
+          </Link>
         </div>
       </footer>
     </div>
