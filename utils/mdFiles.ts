@@ -61,7 +61,10 @@ export function scanMarkdowns(scanDir: string) {
 
         getFeaturedPosts: () => 
             posts.filter(post => post.meta.featured),
-        
+
+        getNonFeaturedPosts: () => 
+            posts.filter(post => !post.meta.featured),
+
         getPostsByCategory: (category: string) => 
             posts.filter(post => post.meta.category === category),
         
@@ -73,6 +76,17 @@ export function scanMarkdowns(scanDir: string) {
         
         getAllCategories: () => 
             [...new Set(posts.map(post => post.meta.category))],
+
+        getAllTagsWithCount: () => {
+            const tagCount: Record<string, number> = {};
+            posts.forEach(post => {
+                post.meta.tags.forEach(tag => {
+                    tagCount[tag] = (tagCount[tag] || 0) + 1;
+                });
+            });
+            // return as array of [tag, count] tuples
+            return Object.entries(tagCount).sort((a, b) => b[1] - a[1]);
+        },
         
         getPostsByDate: (ascending = false) => 
             [...posts].sort((a, b) => {
