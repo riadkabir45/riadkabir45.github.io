@@ -77,7 +77,7 @@ function Posts() {
                     </div>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                    {(featuredPosts.length > 0 ? regularPosts : allPosts).map(post => (
+                    {(allPosts).map(post => (
                         <PostCard key={post.meta.id} {...post.meta} />
                     ))}
                 </div>
