@@ -20,7 +20,11 @@ export function generateStaticParams() {
     return paths;
 }
 
-async function WikiPage({ params }: { params: { wikiPath: string[] } }) {
+async function WikiPage({ 
+  params 
+}: { 
+  params: Promise<{ wikiPath: string[] }> 
+}) {
     const wikiFiles = scanMarkdowns('wiki', true);
     const { wikiPath } = await params;
 

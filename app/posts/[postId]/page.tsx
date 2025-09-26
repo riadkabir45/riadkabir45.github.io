@@ -116,7 +116,11 @@ function PostHeader({ post }: { post: any }) {
   );
 }
 
-export default async function PostPage({ params }: { params: { postId: string } }) {
+export default async function PostPage({ 
+  params 
+}: { 
+  params: Promise<{ postId: string }> 
+}) {
   const { postId } = await params;
   
   const mdFiles = scanMarkdowns('./posts');
