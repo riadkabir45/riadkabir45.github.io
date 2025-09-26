@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import SlideToggle from "./SlideToggle";
 import Link from "next/link";
 
 export default function Nav() {

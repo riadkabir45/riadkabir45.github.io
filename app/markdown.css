@@ -1,39 +1,39 @@
 @import "tailwindcss";
 
 .markdown-content {
-  @apply text-gray-900 leading-relaxed;
+  @apply text-neutral-50 leading-relaxed;
 }
 
 .markdown-content h1 {
-  @apply text-3xl font-bold mt-8 mb-4 text-gray-900 border-b border-gray-200 pb-2;
+  @apply text-3xl font-bold mt-8 mb-4 border-b border-gray-200 pb-2;
 }
 
 .markdown-content h2 {
-  @apply text-2xl font-bold mt-6 mb-3 text-gray-900;
+  @apply text-2xl font-bold mt-6 mb-3;
 }
 
 .markdown-content h3 {
-  @apply text-xl font-semibold mt-5 mb-2 text-gray-900;
+  @apply text-xl font-semibold mt-5 mb-2;
 }
 
 .markdown-content h4 {
-  @apply text-lg font-semibold mt-4 mb-2 text-gray-800;
+  @apply text-lg font-semibold mt-4 mb-2;
 }
 
 .markdown-content h5 {
-  @apply text-base font-semibold mt-3 mb-2 text-gray-800;
+  @apply text-base font-semibold mt-3 mb-2;
 }
 
 .markdown-content h6 {
-  @apply text-sm font-semibold mt-2 mb-1 text-gray-700 uppercase tracking-wide;
+  @apply text-sm font-semibold mt-2 mb-1 uppercase tracking-wide;
 }
 
 .markdown-content p {
-  @apply mb-4 text-gray-700 leading-7;
+  @apply mb-4 leading-7;
 }
 
 .markdown-content a {
-  @apply text-blue-600 hover:text-blue-800 underline transition-colors duration-200;
+  @apply hover:underline hover:text-neutral-900 transition-colors duration-200;
 }
 
 .markdown-content a:hover {
@@ -49,7 +49,7 @@
 }
 
 .markdown-content li {
-  @apply text-gray-700 leading-6;
+  @apply leading-6;
 }
 
 .markdown-content ul li {
@@ -76,7 +76,7 @@
 }
 
 .markdown-content blockquote {
-  @apply border-l-4 border-blue-500 pl-4 py-2 my-6 bg-blue-50 italic text-gray-700;
+  @apply border-l-4 border-blue-500 pl-4 py-2 my-6 bg-blue-50 italic text-gray-900;
 }
 
 .markdown-content blockquote p {
@@ -84,11 +84,11 @@
 }
 
 .markdown-content blockquote blockquote {
-  @apply border-l-4 border-gray-400 bg-gray-50;
+  @apply border-l-4 border-gray-400 bg-gray-50 text-gray-900;
 }
 
 .markdown-content code {
-  @apply bg-gray-100 text-gray-900 px-1.5 py-0.5 rounded text-sm font-mono;
+  @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono text-neutral-900;
 }
 
 .markdown-content pre {
@@ -104,19 +104,19 @@
 }
 
 .markdown-content thead {
-  @apply bg-gray-50;
+  @apply bg-gray-50 text-gray-900;
 }
 
 .markdown-content th {
-  @apply border border-gray-300 px-4 py-3 text-left font-semibold text-gray-900;
+  @apply border border-gray-300 px-4 py-3 text-left font-semibold;
 }
 
 .markdown-content td {
-  @apply border border-gray-300 px-4 py-3 text-gray-700;
+  @apply border border-gray-300 px-4 py-3;
 }
 
 .markdown-content tbody tr:nth-child(even) {
-  @apply bg-gray-50;
+  @apply bg-gray-50 text-gray-900;
 }
 
 .markdown-content tbody tr:hover {
@@ -132,7 +132,7 @@
 }
 
 .markdown-content strong {
-  @apply font-bold text-gray-900;
+  @apply font-bold;
 }
 
 .markdown-content em {
@@ -161,6 +161,10 @@
 
 .markdown-content kbd {
   @apply bg-gray-200 text-gray-800 px-2 py-1 rounded text-xs font-mono border border-gray-400 shadow-sm;
+}
+
+.markdown-content em {
+  @apply italic text-neutral-50;
 }
 
 @media (max-width: 640px) {

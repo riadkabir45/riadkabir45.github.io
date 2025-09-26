@@ -16,14 +16,31 @@ export interface MarkdownMeta {
 export interface MarkdownPost {
     meta: MarkdownMeta;
     content: string;
+    filePath: string;
     excerpt?: string;
 }
 
-export function scanMarkdowns(scanDir: string) {
+export function scanMarkdowns(scanDir: string, recursive?: boolean) {
     const absDir = path.resolve(scanDir);
-    const filenames = fs.readdirSync(absDir)
-        .filter(f => f.endsWith('.md'));
+    const structure = fs.readdirSync(absDir)
+        .filter(f => f.endsWith('.md') || (recursive && fs.statSync(path.join(absDir, f)).isDirectory()));
     
+    const filenames = structure.filter(f => f.endsWith('.md'));
+    const directories = structure.filter(f => !f.endsWith('.md'));
+
+    while (directories.length > 0) {
+        const dir = directories.pop();
+        if (dir) {
+            const dirPath = path.join(absDir, dir);
+            const subStructure = fs.readdirSync(dirPath)
+                .filter(f => f.endsWith('.md') || (recursive && fs.statSync(path.join(dirPath, f)).isDirectory()));
+            const subFilenames = subStructure.filter(f => f.endsWith('.md')).map(f => path.join(dir, f));
+            const subDirectories = subStructure.filter(f => !f.endsWith('.md')).map(f => path.join(dir, f));
+            filenames.push(...subFilenames);
+            directories.push(...subDirectories);
+        }
+    }
+
     const fileIds = filenames.map(f => f.replace(/\.md$/, ''));
 
     const posts: MarkdownPost[] = filenames.map(filename => {
@@ -50,6 +67,7 @@ export function scanMarkdowns(scanDir: string) {
         return {
             meta,
             content,
+            filePath: filepath,
             excerpt: excerpt || data.description || content.substring(0, 200) + '...'
         };
     });
