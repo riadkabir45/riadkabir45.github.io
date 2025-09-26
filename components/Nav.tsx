@@ -9,7 +9,6 @@ export default function Nav() {
 
     function toggleSearch() {
         setSearchState(!searchState);
-        console.log(searchState);
     }
 
     function toggleMobileMenu() {

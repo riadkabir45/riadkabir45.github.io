@@ -67,8 +67,6 @@ function recursiveTable(content: any, parent: string = '/wiki/', level: number =
 function TreeContent({ paths, className, onItemClick, posts = [] }: TreeContentProps) {
 
     const treePath: Record<string, any> = {};
-
-    console.log(posts);
     
 
     for (const p of paths) {
