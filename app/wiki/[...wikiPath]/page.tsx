@@ -39,7 +39,7 @@ async function WikiPage({ params }: { params: { wikiPath: string[] } }) {
     const foundPost = posts.find(p => p.filePath.endsWith(landCrit) || p.filePath.endsWith(childCrit));
 
     if (!foundPost) {
-        return <div className="text-center texr-5xl">Wiki page not found for path: {currentPath}</div>;
+        return <div className="text-center text-5xl text-gray-900 dark:text-gray-100">Wiki page not found for path: {currentPath}</div>;
     }
 
     const h2Headings = getH2Headings(foundPost.content);
@@ -55,9 +55,9 @@ async function WikiPage({ params }: { params: { wikiPath: string[] } }) {
     });
 
     return (
-        <div className="flex flex-row max-w-full min-h-screen justify-around">
+        <div className="flex flex-row max-w-full min-h-screen justify-around bg-white dark:bg-gray-900 transition-colors">
             <TreeContent paths={wikiPaths} className="w-80 flex-shrink-0 pl-8" />
-            <article className="markdown-content container max-w-5xl px-4 py-8 mx-auto">
+            <article className="markdown-content container max-w-5xl px-4 py-8 mx-auto text-gray-900 dark:text-gray-100">
                 <ReactMarkdown 
                 remarkPlugins={[remarkGfm]}
                 components={{
@@ -67,12 +67,53 @@ async function WikiPage({ params }: { params: { wikiPath: string[] } }) {
                     return (
                         <h2 
                         id={id} 
+                        className="text-2xl font-bold text-gray-900 dark:text-gray-100 mt-8 mb-4"
                         {...props}
                         >
                         {children}
                         </h2>
                     );
-                    }
+                    },
+                    h3: ({ children, ...props }) => (
+                        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mt-6 mb-3" {...props}>
+                            {children}
+                        </h3>
+                    ),
+                    p: ({ children, ...props }) => (
+                        <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed" {...props}>
+                            {children}
+                        </p>
+                    ),
+                    code: ({ children, ...props }) => (
+                        <code className="bg-gray-100 dark:bg-gray-800 text-blue-600 dark:text-blue-400 px-1 py-0.5 rounded text-sm font-mono" {...props}>
+                            {children}
+                        </code>
+                    ),
+                    pre: ({ children, ...props }) => (
+                        <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg overflow-x-auto mb-4" {...props}>
+                            {children}
+                        </pre>
+                    ),
+                    blockquote: ({ children, ...props }) => (
+                        <blockquote className="border-l-4 border-blue-500 dark:border-blue-400 pl-4 py-2 my-4 bg-blue-50 dark:bg-blue-900/20 text-gray-700 dark:text-gray-300 italic" {...props}>
+                            {children}
+                        </blockquote>
+                    ),
+                    ul: ({ children, ...props }) => (
+                        <ul className="list-disc list-inside mb-4 space-y-2 text-gray-700 dark:text-gray-300" {...props}>
+                            {children}
+                        </ul>
+                    ),
+                    ol: ({ children, ...props }) => (
+                        <ol className="list-decimal list-inside mb-4 space-y-2 text-gray-700 dark:text-gray-300" {...props}>
+                            {children}
+                        </ol>
+                    ),
+                    li: ({ children, ...props }) => (
+                        <li className="text-gray-700 dark:text-gray-300" {...props}>
+                            {children}
+                        </li>
+                    )
                 }}
                 >
                 {foundPost.content}
