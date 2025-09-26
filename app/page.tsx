@@ -80,7 +80,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {mdFiles.getNonFeaturedPosts().slice(0, 2).map(post => (
+            {mdFiles.getAllPosts().slice(0, 4).map(post => (
               <PostCard key={post.meta.id} {...post.meta} />
             ))}
           </div>

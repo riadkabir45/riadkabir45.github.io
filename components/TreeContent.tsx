@@ -1,38 +1,33 @@
-import { scanMarkdowns } from '@/utils/mdFiles';
-import { randomUUID } from 'crypto';
-import Link from 'next/link';
 import React from 'react';
 import { ReactElement } from 'react';
 import { type MarkdownPost } from "@/utils/mdFiles";
 import SwitchLink from './SwitchLink';
 
-
-const wikiMD = scanMarkdowns('wiki', true);
-const posts = wikiMD.getAllPosts();
-
 interface TreeContentProps {
     paths: string[];
     className?: string;
+    onItemClick?: () => void;
+    posts?: MarkdownPost[];
 }
 
 function titleCase(text: string){
-    const parts = text.split('-_');
+    const parts = text.split('_');
     const upperParts = parts.map(part => part.charAt(0).toUpperCase() + part.slice(1));
     return upperParts.join(' ');
 }
 
-function findMetaData(path: string) {
-    const post = posts.find(p => {
-        const compPath = p.filePath.replace(process.cwd(), '');
-        const [landCrit, childCrit] = [ path + (path.endsWith('/') ? '' : '/') + 'page.md', path + '.md'];
-        return compPath === landCrit || compPath === childCrit;
+function findMetaData(path: string, posts: MarkdownPost[] = []) {
+    const post = posts.find((p: MarkdownPost) => {
+        // Since paths are already processed on server side, we can compare directly
+        const cleanPath = path.replace('/wiki/', '').replace(/\/$/, '');
+        const [landCrit, childCrit] = [cleanPath + '/page', cleanPath];
+        return p.filePath === landCrit || p.filePath === childCrit;
     });
-
     
     return post;
 }
 
-function recursiveTable(content: Record<string, any>, parent = "/wiki/", level = 0) {
+function recursiveTable(content: any, parent: string = '/wiki/', level: number = 0, onItemClick?: () => void, posts: MarkdownPost[] = []): ReactElement {
 
     const treeLine = "-";
     
@@ -50,29 +45,31 @@ function recursiveTable(content: Record<string, any>, parent = "/wiki/", level =
         return paddingClasses[Math.min(level, paddingClasses.length - 1)] || 'pl-24';
     };
 
-    findMetaData(parent);
-
     return (
         <>
             {Object.entries(content).map(([key, value]) => (
                 <div key={key}> 
                     <SwitchLink 
-                        className={`block py-1 px-2 ${findMetaData(`${parent}${key}`) !== undefined ? 'hover:bg-gray-100 dark:hover:bg-gray-800' : ''} rounded ${getPaddingClass(level)}`}
-                        state={findMetaData(`${parent}${key}`) !== undefined}
+                        className={`block py-1 px-2 ${findMetaData(`${parent}${key}`, posts) !== undefined ? 'hover:bg-gray-100 dark:hover:bg-gray-800' : ''} rounded ${getPaddingClass(level)}`}
+                        state={findMetaData(`${parent}${key}`, posts) !== undefined}
                         href={`${parent}${key === '' ? '' : key}`}
+                        onClick={onItemClick}
                     >
-                        { key === '' ? 'Wiki' : findMetaData(`${parent}${key}`)?.meta.title || titleCase(key)}
+                        { key === '' ? 'Wiki' : findMetaData(`${parent}${key}`, posts)?.meta.title || titleCase(key)}
                     </SwitchLink>
-                    {value !== null && typeof value === 'object' ? recursiveTable(value, `${parent}${key}/`, level + 1) : null}
+                    {value !== null && typeof value === 'object' ? recursiveTable(value, `${parent}${key}/`, level + 1, onItemClick, posts) : null}
                 </div>
             ))}
         </>
     );
 }
 
-function TreeContent({ paths, className = "" }: TreeContentProps) {
+function TreeContent({ paths, className, onItemClick, posts = [] }: TreeContentProps) {
 
     const treePath: Record<string, any> = {};
+
+    console.log(posts);
+    
 
     for (const p of paths) {
         const parts = p.split('/');
@@ -94,7 +91,7 @@ function TreeContent({ paths, className = "" }: TreeContentProps) {
             <div className='sticky top-8 py-8'>
                 <h2>Wiki Navigation</h2>
                 <nav className='my-5 flex flex-col'>
-                    {recursiveTable(treePath)}
+                    {recursiveTable(treePath, '/wiki/', 0, onItemClick, posts)}
                 </nav>
             </div>
       </div>
