@@ -162,10 +162,10 @@ export default function WikiPageClient({ foundPost, wikiPaths, h2Headings, posts
                     
                     {/* Table of Contents - Desktop only or when sidebar closed on mobile */}
                     <div className={`
-                        w-80 flex-shrink-0 hidden lg:block
+                        pt-12 w-80 flex-shrink-0 hidden lg:block
                         ${sidebarOpen ? 'lg:hidden' : 'lg:block'}
                     `}>
-                        <TableContent className='pl-8' content={h2Headings} />
+                        <TableContent className='pl-8 sticky top-12' content={h2Headings} />
                     </div>
                 </div>
             </div>
